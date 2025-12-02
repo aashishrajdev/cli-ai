@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import chalk from "chalk";
 import figlet from "figlet";
 import { Command } from "commander";
-import { login } from "./commands/auth/login.js";
+import { login, logout, whoami } from "./commands/auth/login.js";
 
 dotenv.config();
 
@@ -26,7 +26,9 @@ async function main() {
   program
     .version("1.0.0")
     .description("A-CLI: Your AI Command Line Assistant")
-    .addCommand(login);
+    .addCommand(login)
+    .addCommand(logout)
+    .addCommand(whoami);
 
   program.action(() => {
     program.help();
