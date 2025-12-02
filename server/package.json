@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
+  "bin": {
+    "ai": "./src/cli/main.js"
+  },
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js"
@@ -12,12 +15,20 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@clack/prompts": "^0.11.0",
     "@prisma/client": "^6.19.0",
     "better-auth": "^1.4.4",
+    "boxen": "^8.0.1",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "prisma": "^6.19.0"
+    "figlet": "^1.9.4",
+    "open": "^11.0.0",
+    "prisma": "^6.19.0",
+    "yocto-spinner": "^1.0.0",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@types/express": "^5.0.5",
