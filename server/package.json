@@ -28,6 +28,8 @@
     "express": "^5.1.0",
     "figlet": "^1.9.4",
     "fs": "^0.0.1-security",
+    "marked": "^15.0.12",
+    "marked-terminal": "^7.3.0",
     "open": "^11.0.0",
     "prisma": "^6.19.0",
     "yocto-spinner": "^1.0.0",

@@ -1,5 +1,5 @@
 import { google } from "@ai-sdk/google";
-import { streamText } from "ai";
+import { convertToModelMessages, streamText } from "ai";
 import { config } from "../../config/google.config.js";
 import chalk from "chalk";
 

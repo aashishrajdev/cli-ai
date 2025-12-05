@@ -5,6 +5,7 @@ import chalk from "chalk";
 import figlet from "figlet";
 import { Command } from "commander";
 import { login, logout, whoami } from "./commands/auth/login.js";
+import { wakeUp } from "./commands/ai/wakeUp.js";
 
 dotenv.config();
 
@@ -18,9 +19,7 @@ async function main() {
       })
     )
   );
-  console.log(
-    chalk.green("Welcome to A-CLI - Your AI Command Line Assistant\n")
-  );
+  console.log(chalk.red("Welcome to A-CLI - Your AI Command Line Assistant\n"));
 
   const program = new Command("ai");
   program
@@ -28,7 +27,8 @@ async function main() {
     .description("A-CLI: Your AI Command Line Assistant")
     .addCommand(login)
     .addCommand(logout)
-    .addCommand(whoami);
+    .addCommand(whoami)
+    .addCommand(wakeUp);
 
   program.action(() => {
     program.help();
