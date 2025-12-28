@@ -13,13 +13,16 @@ async function main() {
   // Display banner
   console.log(
     chalk.cyan(
-      figlet.textSync("A - CLI", {
+      figlet.textSync("AI - CLI", {
         font: "Standard",
         horizontalLayout: "default",
       })
     )
   );
-  console.log(chalk.red("Welcome to A-CLI - Your AI Command Line Assistant\n"));
+  console.log(chalk.red("Welcome to A-CLI - Your AI Command Line Assistant"));
+  console.log(
+    chalk.gray("Made with ❤️  by Aashish | github.com/aashishrajdev\n")
+  );
 
   const program = new Command("ai");
   program

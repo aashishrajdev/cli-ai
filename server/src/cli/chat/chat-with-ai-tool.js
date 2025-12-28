@@ -50,7 +50,7 @@ async function getUserFromToken() {
   const token = await getStoredToken();
 
   if (!token?.access_token) {
-    throw new Error("Not authenticated. Please run 'orbit login' first.");
+    throw new Error("Not authenticated. Please run 'ai login' first.");
   }
 
   const spinner = yoctoSpinner({ text: "Authenticating..." }).start();
@@ -393,7 +393,7 @@ async function chatLoop(conversation) {
 export async function startToolChat(conversationId = null) {
   try {
     intro(
-      boxen(chalk.bold.cyan("🛠️   A - CLI  -  Tool Calling Mode"), {
+      boxen(chalk.bold.cyan("🛠️   AI - CLI  -  Tool Calling Mode"), {
         padding: 1,
         borderStyle: "double",
         borderColor: "cyan",
