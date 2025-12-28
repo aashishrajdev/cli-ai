@@ -7,9 +7,9 @@ import { useState } from "react";
 import { CheckCircle, XCircle, Smartphone } from "lucide-react";
 import { toast } from "sonner";
 
-import React from "react";
+import React, { Suspense } from "react";
 
-const DeviceApprovalPage = () => {
+const DeviceApprovalPageContent = () => {
   const { data, isPending } = authClient.useSession();
 
   const router = useRouter();
@@ -164,4 +164,16 @@ const DeviceApprovalPage = () => {
   );
 };
 
-export default DeviceApprovalPage;
+export default function DeviceApprovalPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex flex-col items-center justify-center h-screen bg-background">
+          <Spinner />
+        </div>
+      }
+    >
+      <DeviceApprovalPageContent />
+    </Suspense>
+  );
+}
