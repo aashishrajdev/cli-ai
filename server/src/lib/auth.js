@@ -8,7 +8,7 @@ export const auth = betterAuth({
     provider: "postgresql", // or "mysql", "postgresql", ...etc
   }),
   basePath: "/api/auth",
-  trustedOrigins: ["http://localhost:3000"],
+  trustedOrigins: ["https://cli-ai.vercel.app"],
   plugins: [
     deviceAuthorization({
       expiresIn: "30m", //device code expiration time
